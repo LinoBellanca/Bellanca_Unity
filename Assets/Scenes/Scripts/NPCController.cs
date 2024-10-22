@@ -20,9 +20,12 @@ public class NPCController : MonoBehaviour
     private void Update()
     {
         // Récupérer la vitesse de l'agent
-        float speed = _agent.velocity.magnitude;
+        //float speed = _agent.velocity.magnitude;
 
         // Mettre à jour le paramètre "Speed" dans l'Animator
-        _animator.SetFloat("Speed", speed);
+        //_animator.SetFloat("Speed", speed);
+
+        //Récupérer directement la vitesse de l'agent et l'envoyer au paramètre "Speed" dans l'Animator
+        _animator.SetFloat("Speed", _agent.velocity.magnitude);
     }
 }
